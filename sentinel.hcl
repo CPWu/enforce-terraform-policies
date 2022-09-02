@@ -5,7 +5,17 @@
 # 
 # Advisory will never interrupt the run, and instead will only surface policy failures as informational to the user.
  
-policy "allowed-terraform-version" {
-    enforcement_level = "soft-mandatory"
+policy "enforce-mandatory-tags" {
+  source = "./enforce-mandatory-tags.sentinel"
+  enforcement_level = "hard-mandatory"
 }
 
+policy "restrict-ec2-instance-type" {
+  source = "./restrict-ec2-instance-type.sentinel"
+  enforcement_level = "soft-mandatory"
+}
+
+policy "limit-proposed-monthly-cost" {
+    source = "./limit-proposed-monthly-cost.sentinel"
+    enforcement_level = "advisory"
+}

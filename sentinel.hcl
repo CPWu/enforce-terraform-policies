@@ -5,7 +5,7 @@
 # 
 # Advisory will never interrupt the run, and instead will only surface policy failures as informational to the user.
 
-policy "limit-proposed-monthly-cost" {
+policy "limit-proposed-monthly-costs" {
     //source = "./limit-proposed-monthly-costs.sentinel"
     enforcement_level = "advisory"
 }

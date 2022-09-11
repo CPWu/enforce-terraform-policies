@@ -13,3 +13,7 @@ policy "limit-proposed-monthly-costs" {
 policy "allowed-terraform-version" {
     enforcement_level = "soft-mandatory"
 }
+
+policy "allowed-instance-types" {
+    enforcement_level = "hard-mandatory"
+}
